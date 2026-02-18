@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <nav>
-        <a href="../index.html">Home</a> |
-        <a href="../projects/index.html">Projects</a> |
-        <a href="index.html">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="../projects/index.html">Projects</a>
+        <a class="current" href="index.html">Contact</a>
         <a href="../resume/index.html">Resume</a>
         <a href="https://github.com/milintun" target="_blank">Github</a>
     </nav>
@@ -16,17 +16,17 @@
 <body>
     <h1>Contact Me!</h1>
     <form action="mailto:milintun@gmail.com" method="GET">
-        <label>
+        <label class="form-element">
             Email
-            <input value="john@gmail.com" type="email" name="email">
+            <input  class="form-element" value="john@gmail.com" type="email" name="email">
         </label>
-        <label>
+        <label class="form-element">
             Subject
-            <input value="John" type="text" name="subject">
+            <input  class="form-element" value="John" type="text" name="subject">
         </label>
-        <label>
+        <label class="form-element">
             Message
-            <textarea value="hey" name="body" id=""></textarea>
+            <textarea  class="form-element" value="hey" name="body" id=""></textarea>
         </label>
         <button>Submit</button>
     </form>
