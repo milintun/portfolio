@@ -13,6 +13,11 @@ body {
  accent-color: var(--color-accent);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .milin-pic {
  width: 70%
 }
@@ -27,8 +32,6 @@ nav {
 
 nav a {
   flex: 1;
-  text-decoration: none;
-  color: inherit;
   text-align: center;
   padding: 0.5em;
 }
@@ -156,20 +159,146 @@ h1 {
   padding-left: 1.25em;
 }
 
-h1 h2 h3 h4 h5 h6 {
+h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
 
-.resume-section a {
-  text-decoration: none;
-  color: inherit;
+/* ── Report page ── */
+
+.report-header {
+  margin-block: 3rem 2.5rem;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 1.5rem;
+}
+
+.report-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.report-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.report-byline {
+  margin: 0;
+  color: oklch(45% 5% 200);
+  font-size: 0.95rem;
+}
+
+.report-intro {
+  font-size: 1.05rem;
+  color: oklch(35% 3% 200);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.report-section {
+  margin-bottom: 3rem;
+}
+
+.report-section > h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid oklch(88% 2% 200);
+}
+
+.report-subsection {
+  margin-bottom: 2.5rem;
+}
+
+.report-subsection > h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: oklch(from var(--color-accent) 50% c h);
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
   text-align: center;
 }
 
-.resume-section a:hover {
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+.report-questions {
+  padding-left: 1.25rem;
+  line-height: 1.7;
+}
+
+.report-questions > li {
+  margin-bottom: 1rem;
+}
+
+.report-questions ul {
+  margin-top: 0.25rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.report figure {
+  margin: 1.5rem auto;
+  width: fit-content;
+  max-width: 100%;
+  /* background: oklch(94.553% 0.00891 180.286); */
+  border: 1px solid oklch(90% 2% 200);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.report figure img,
+.report figure video {
+  display: block;
+  max-width: 100%;
+  max-height: 60vh;
+}
+
+.report figcaption {
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
+  color: oklch(27.274% 0.00003 271.152);
+  border-top: 1px solid oklch(90% 2% 200);
+  line-height: 1.5;
+}
+
+.report p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: oklch(20% 2% 200);
+}
+
+.report-figures-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .report-figures-grid {
+    grid-template-columns: 1fr;
+  }
+  .report-figures-grid figure {
+    margin: 0;
+  }
+}
+
+.resume-section a,
+.projects a {
+  text-align: center;
   transition: all 0.4s;
+}
+
+.resume-section a:hover,
+.projects a:hover {
+  background-color: oklch(from var(--color-accent) 95% 5% h);
   padding: 0.2rem;
 }
 
